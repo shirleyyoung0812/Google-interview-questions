@@ -42,7 +42,7 @@ public class FormatRGBandMore {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(formatRGB(12, 24, 36));
-		System.out.println(Integer.toBinaryString(hexToDecimal("0xffffffffffffffff")));
+		System.out.println(Integer.toBinaryString(hexToDecimal("0x55555555")));
 	}
 
 }
