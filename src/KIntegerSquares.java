@@ -47,8 +47,40 @@ public class KIntegerSquares {
 		}
 		return 4;
 	}
+	/**
+	 * doesn't work
+	 * @param N
+	 * @return
+	 */
+	public static int kSquares2(int N){
+		if(N < 0)
+			return 0;
+		int sqrt = (int)Math.sqrt(N);
+		if(sqrt * sqrt == N)
+			return 1;
+		return kSquares(N - sqrt * sqrt) + 1;
+	}
+	public static int kSquares3(int N){
+		if(N < 0)
+			throw new IllegalArgumentException("Input must be greater than 0!");
+		if(N == 0)
+			return 0;
+		int[] minSquare = new int[N + 1];
+		int max = (int)Math.sqrt(N);
+		for (int i = 0; i <= N; i++)
+			minSquare[i] = i;
+		for(int i = 1; i <= N; i++){
+			for(int j = 1; j <= max; j++){
+				if(i - j * j < 0)
+					continue;
+				minSquare[i] = Math.min(minSquare[i], minSquare[i - j * j] + 1);
+			}
+		}
+		return minSquare[N];
+	}
 
 	public static void main(String[] args) {
-		System.out.println(kSquares(31));
+		System.out.println(kSquares(12));
+		System.out.println(kSquares3(12));
 	}
 }

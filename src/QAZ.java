@@ -48,11 +48,49 @@ public class QAZ {
 		return left.qaz > right.qaz ? left : right;
 			
 	}
+	public static int maxQAZ2(int[] array){
+		if(array == null || array.length == 0)
+			return -1;
+		return getQ(array, 0, array.length - 1).val;
+	}
+	private static class Qaz{
+		int val;
+		int min;
+		public Qaz(int val, int min){
+			this.val = val;
+			this.min = min;
+		}
+	}
+	private static Qaz getQ(int[] array, int start, int end){
+		if(start > end)
+			return null;
+		if(start == end)
+			return new Qaz(0, array[start]);
+		if(end - start == 1){
+			return array[start] < array[end] ? new Qaz(1, array[start]) : new Qaz(0, array[end]);
+		}
+		int mid = (start + end) / 2;
+		Qaz left = getQ(array, start, mid);
+		Qaz right = getQ(array, mid + 1, end);
+		if(left.min < right.min)
+			left.val += (end - mid);
+		else{
+			for(int i = mid + 1; i <= end; i++){
+				if(array[i] > left.min)
+					left.val++;
+			}
+		}
+		return new Qaz(Math.max(left.val, right.val), Math.min(left.min, right.min));
+		
+		
+		
+	}
 	public static void main(String[] args) {
 		//int[] array = {28};
 		//int[] array = {19, 37};
-		int[] array = {37, 19};
-		//int[] array = {97, 65, 23, 78, 46, 31};
+		//int[] array = {37, 19};
+		int[] array = {97, 65, 23, 78, 46, 31};
 		System.out.println(maxQAZ(array));
+		System.out.println(maxQAZ2(array));
 	}
 }

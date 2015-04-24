@@ -1,0 +1,35 @@
+The dynamics of flexible polymers in shear is of great practical interest because this type of flow occurs whenever a fluid flows past a surface. 
+Macroscopic, non-Newtonian rheological properties of polymer solutions, such
+as flow-dependent viscosities and normal
+stresses, result from microscopic stresses that
+arise when polymeric molecules are stretched
+and affect the solvent motion. Thus, much
+effort has been directed at predicting the molecular
+dynamics of polymers in shear flows. However, it has been difficult to rigorously
+test these predictions because the dynamics
+of a polymer molecule in shear have
+not been observed directly. Experimental efforts
+have mainly focused on measuring bulk
+rheological properties or on measuring the
+scattering of light or neutrons by polymer
+solutions. Here we describe how single-molecule imaging techniques can be
+used to study the configurations of polymers
+in shear flow so that the detailed molecular predictions of theories can be tested.
+In short, Shirley doesn't care about how polymer tumbles in shear flow!
+Polymer dynamics are of central importance in materials science,
+mechanical engineering, biology and medicine. The dynamics of
+macromolecular solutions and melts in shear flow are typically
+studied using bulk experimental methods such as light and
+neutron scattering and birefringence. But the effect of shear
+on the conformation and dynamics of individual polymers is
+still not well understood. Here we describe observations of the
+real-time dynamics of individual, flexible polymers fluorescently
+labelled DNA molecules under a shear flow. The sheared
+polymers exhibit many types of extended conformation with an
+overall orientation ranging from parallel to perpendicular with
+respect to the flow direction. For shear rates much smaller than
+the inverse of the relaxation time of the molecule, the relative
+populations of these two main types of conformation are
+controlled by the rate of the shear flow. These results question
+the adequacy of assumptions made in standard models of polymer
+dynamics.
